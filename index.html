@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW Course List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-logo">⚡ CW</div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+        <p class="loader-text">Loading 3,600+ Premium Courses...</p>
+    </div>
+    <header>
+        <div class="header-top">
+            <div class="logo">CW<span>CourseList</span></div>
+            <div class="header-actions">
+                <button class="action-btn" id="appBtn"><span class="icon">📱</span> App</button>
+                <button class="action-btn" id="faqBtn"><span class="icon">❓</span> FAQs</button>
+                <a href="https://t.me/CourseWallah123" target="_blank" class="action-btn telegram-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 4.322-1.353 5.962-.18.717-.438 1.077-.68 1.077-.438 0-1.024-.438-1.602-1.077-.319-.319-.878-.878-1.353-1.353-.438-.438-1.024-.438-1.602 0-.319.319-.878.878-1.353 1.353-.438.438-1.024.438-1.602 0-.319-.319-.878-.878-1.353-1.353C5.5 12.721 5.08 12 5.08 11.25c0-.638.319-1.077.878-1.353l6.88-3.602c.638-.319 1.353-.319 1.92 0 .48.319.798.878.804 1.866z"/></svg>
+                </a>
+                <button class="action-btn" onclick="window.location.reload()"><span class="icon">🔄</span></button>
+                <button class="action-btn" id="menuBtn"><span class="icon">☰</span></button>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search course by name or #number...">
+            <div class="mic-icon" id="micBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
+            </div>
+        </div>
+    </header>
+    <div class="stats-bar" id="statsBar">Loading courses...</div>
+    <main>
+        <div class="main-header">
+            <h2 id="allCoursesTitle">All Courses</h2>
+            <button id="sortBtn" class="sort-btn">↓ Sort</button>
+        </div>
+        <div id="courseContainer" class="course-grid"></div>
+    </main>
+    <div class="modal-overlay" id="faqModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>❓ Frequently Asked Questions (Q&A)</h2>
+                <span class="close-modal" id="closeFaqBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="faq-item">
+                    <h3>Important Delivery & Access Policy</h3>
+                    <p>⚡ <b>Courses sirf aur sirf Telegram pe milenge:</b> Yahan koi slow Google Drive ya Mega link NAHI diya jata.</p>
+                    <p>🎬 <b>Direct Videos Format (No ZIP / RAR):</b> Sabhi lectures direct Full HD video format mein hain, 1-tap me turant play aur download karein.</p>
+                    <p>🛡️ <b>Lifetime Permanent Access:</b> Channel ka access aapke paas lifetime rahega — 100% safe & permanent access!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How to Buy?</h3>
+                    <p>Course par "Unlock Course" dabayein. Aap seedha hamare Telegram par pahunch jayenge. Wahan hum aapko payment details aur access denge.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://t.me/CourseWallah123" target="_blank" class="btn-telegram-modal">Contact on Telegram</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🛒 Your Cart</h2>
+                <span class="close-modal" id="closeCartBtn">&times;</span>
+            </div>
+            <div class="modal-body" id="cartItemsContainer"></div>
+            <div class="modal-footer cart-footer">
+                <div class="cart-total">Total: ₹<span id="cartTotalPrice">0</span></div>
+                <button class="btn-telegram-modal" id="checkoutBtn">Checkout on Telegram</button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Categories</h2>
+            <span class="close-btn" id="closeBtn">&times;</span>
+        </div>
+        <p class="sidebar-sub">Select a category to filter:</p>
+        <div id="categoryList" class="category-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
