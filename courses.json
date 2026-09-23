@@ -1,0 +1,5 @@
+[
+    { "id": 1, "title": "Alpha Batch 3.0", "price": 299, "rating": 4.8, "reviews": 307, "category": "Coding & Tech", "likes": 72, "dislikes": 3, "image": "https://placehold.co/600x400/1e293b/818cf8?text=Alpha+Batch+3.0" },
+    { "id": 2, "title": "Delta Batch 2.0", "price": 299, "rating": 4.9, "reviews": 234, "category": "Coding & Tech", "likes": 89, "dislikes": 0, "image": "https://placehold.co/600x400/1e293b/818cf8?text=Delta+Batch+2.0" },
+    { "id": 3, "title": "Complete AIML Batch", "price": 299, "rating": 4.9, "reviews": 382, "category": "AI & Automation", "likes": 45, "dislikes": 2, "image": "https://placehold.co/600x400/1e293b/818cf8?text=AIML+Batch" }
+]
